@@ -73,7 +73,7 @@ function goToPage(page){
 				html += '<div class = "pageButtons">';
 				for (var i = 0; i < pages; i++){
 					var pageNumber = i+1;
-					html += '<input class = "pageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
+					html += '<input class = "pageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
 				};
 				html += '</div>';
 				html += '<br><br>';

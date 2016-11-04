@@ -3,15 +3,19 @@ body {
 	background-color: #ccb3ff;
 }
 a {
-	color: #333399;
+	color: #e3005a;
+}
+a:hover {
+	color: #1acc5a;
 }
 .pageButton {
 	background-color: #ccb3ff;
 	color: #140033;
 	border: none;
-	padding: 5px 10px 5px;
-	margin: 10px 5px 10px 0px;
+	width: 30px;
+	margin: 5px 5px 5px 0px;
 	border-radius: 3px;
+	text-align: center;
 }
 
 .pageButton:hover {
@@ -21,7 +25,8 @@ a {
 }
 .pageButtons {
 	position: fixed;
-	right: 20px;
+	right: 5px;
+	top: 20px;
 }
 .searchButton {
 	background-color: #140033;
@@ -41,4 +46,7 @@ a {
 	height: 3px;
 	width: 200px;
 	background-color: #140033;
+}
+* {
+	font-family: 'Inconsolata', monospace;
 }
