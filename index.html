@@ -8,18 +8,39 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	
+	
+	 <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
 	<div class="container-fluid">
-		<div class="jumbotron" >
+		<div>
 			<h1>Search itunes</h1>
 		</div>
-		<h2>WHAT YOU WANNA LOOK FOR:</h2><br>
-		<input type="text" id="search-keyword" title="Enter Search">
+		<div>
+			<input type="text" id="search-keyword" title="Enter Search">
 		<br>
-		<input type="button" value="Search" onclick="search();">
+		</div>
+			<div class = "button">
+				<input type="button" class = "pageButton" value="Search" onclick="search();"/>
+			</div>
+		
 		<br>
 		<br>
 		<div id="results">

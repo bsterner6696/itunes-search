@@ -30,8 +30,9 @@ function parseResults(result) {
 				var pages = Math.ceil(results.length/20);
 				for (var i = 0; i < pages; i++){
 					var pageNumber = i+1;
-					html += '<input type = "button" value = "page'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
+					html += '<input  type = "button" class = "pageButton" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
 				}
+				html += '<br><br>';
 				for (var i = 0; i < 20  && i < results.length; i++) {
 					var item = results[i];
 					var obj = {
@@ -45,21 +46,21 @@ function parseResults(result) {
 						collection_url: item.collectionViewUrl,
 						genre: item.primaryGenreName
 					};
-					//results[i] = obj;
 
 					html += '<div class="songs-search-result">';
 
-					html += '<p><strong>Track:</strong>{0}&nbsp;&nbsp;'.replace("{0}", obj.track_name);
+					html += '<p><strong>Track: </strong>{0}&nbsp;&nbsp;'.replace("{0}", obj.track_name);
 					html += '<a href="{0}" target="_blank">Preview</a>&nbsp;&nbsp;'.replace("{0}", item.previewUrl);
 					html += '<a href="{0}" target="_blank">Full Song</a>&nbsp;&nbsp;'.replace("{0}", obj.track_url);
-					html += '<strong>Track Price:</strong>{0} {1}</p>'.replace("{0}", item.trackPrice).replace("{1}", item.currency);
-					html += '<p><strong>Artist:</strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.artist_url).replace("{1}", obj.artist_name);
-					html += '<p><strong>Album:</strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.collection_url).replace("{1}", obj.collection_name);
-					html += '<p><strong>Album Price:</strong>{0} {1}</p>'.replace("{0}", item.collectionPrice).replace("{1}", item.currency);
-					html += '<p><strong>Primary Genre:</strong>{0}</p>'.replace("{0}", obj.genre);
-
+					html += '<strong>Track Price: </strong>{0} {1}</p>'.replace("{0}", item.trackPrice).replace("{1}", item.currency);
+					html += '<p><strong>Artist: </strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.artist_url).replace("{1}", obj.artist_name);
+					html += '<p><strong>Album: </strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.collection_url).replace("{1}", obj.collection_name);
+					html += '<p><strong>Album Price: </strong>{0} {1}</p>'.replace("{0}", item.collectionPrice).replace("{1}", item.currency);
+					html += '<p><strong>Primary Genre: </strong>{0}</p>'.replace("{0}", obj.genre);					
 					html += '</div>';
-					html += '<br>'
+					html += '<br>';
+					html += '<div class="separator"></div>';
+					html += '<br>';
 				}
 				jQuery('#results').html(html);
 			}
@@ -70,8 +71,9 @@ function goToPage(page){
 				var pages = Math.ceil(results.length/20);
 				for (var i = 0; i < pages; i++){
 					var pageNumber = i+1;
-					html += '<input type = "button" value = "page'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
+					html += '<input class = "pageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
 				}
+				html += '<br><br>';
 				if (page === 0){
 					page = 1;
 				}
@@ -96,21 +98,21 @@ function goToPage(page){
 						collection_url: item.collectionViewUrl,
 						genre: item.primaryGenreName
 					};
-					//results[i] = obj;
 
 					html += '<div class="songs-search-result">';
 
-					html += '<p><strong>Track:</strong>{0}&nbsp;&nbsp;'.replace("{0}", obj.track_name);
+					html += '<p><strong>Track: </strong>{0}&nbsp;&nbsp;'.replace("{0}", obj.track_name);
 					html += '<a href="{0}" target="_blank">Preview</a>&nbsp;&nbsp;'.replace("{0}", item.previewUrl);
 					html += '<a href="{0}" target="_blank">Full Song</a>&nbsp;&nbsp;'.replace("{0}", obj.track_url);
-					html += '<strong>Track Price:</strong>{0} {1}</p>'.replace("{0}", item.trackPrice).replace("{1}", item.currency);
-					html += '<p><strong>Artist:</strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.artist_url).replace("{1}", obj.artist_name);
-					html += '<p><strong>Album:</strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.collection_url).replace("{1}", obj.collection_name);
-					html += '<p><strong>Album Price:</strong>{0} {1}</p>'.replace("{0}", item.collectionPrice).replace("{1}", item.currency);
-					html += '<p><strong>Primary Genre:</strong>{0}</p>'.replace("{0}", obj.genre);
-
+					html += '<strong>Track Price: </strong>{0} {1}</p>'.replace("{0}", item.trackPrice).replace("{1}", item.currency);
+					html += '<p><strong>Artist: </strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.artist_url).replace("{1}", obj.artist_name);
+					html += '<p><strong>Album: </strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.collection_url).replace("{1}", obj.collection_name);
+					html += '<p><strong>Album Price: </strong>{0} {1}</p>'.replace("{0}", item.collectionPrice).replace("{1}", item.currency);
+					html += '<p><strong>Primary Genre: </strong>{0}</p>'.replace("{0}", obj.genre);
 					html += '</div>';
-					html += '<br>'
+					html += '<br>';
+					html += '<div class="separator"></div>';
+					html += '<br>';
 				}
 				
 				jQuery('#results').html(html);
