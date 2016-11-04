@@ -28,11 +28,12 @@ function parseResults(result) {
 				searchResults = result;
 				var html = "";
 				var pages = Math.ceil(results.length/20);
+				html += '<div class = "pageButtons">';
 				for (var i = 0; i < pages; i++){
 					var pageNumber = i+1;
-					html += '<input  type = "button" class = "pageButton" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
-				}
-				html += '<br><br>';
+					html += '<input  type = "button" class = "pageButton" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
+				};
+				html += '</div>';
 				for (var i = 0; i < 20  && i < results.length; i++) {
 					var item = results[i];
 					var obj = {
@@ -69,10 +70,12 @@ function goToPage(page){
 	var results = searchResults.results;
 				var html = "";
 				var pages = Math.ceil(results.length/20);
+				html += '<div class = "pageButtons">';
 				for (var i = 0; i < pages; i++){
 					var pageNumber = i+1;
 					html += '<input class = "pageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');">';
-				}
+				};
+				html += '</div>';
 				html += '<br><br>';
 				if (page === 0){
 					page = 1;
