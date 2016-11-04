@@ -10,6 +10,7 @@ a:hover {
 }
 .pageButton {
 	background-color: #ccb3ff;
+	opacity: .7;
 	color: #140033;
 	border: none;
 	width: 30px;
