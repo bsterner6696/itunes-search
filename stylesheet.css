@@ -1,6 +1,7 @@
 body {
 	background-image: url("glitch.png");
 	background-color: #ccb3ff;
+	background-size: 100%;
 }
 a {
 	color: #e3005a;

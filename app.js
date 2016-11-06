@@ -58,8 +58,8 @@ function parseResults(result) {
 
 					html += '<p><strong>Track: </strong>{0}&nbsp;&nbsp;'.replace("{0}", obj.track_name);
 					html += '<a href="{0}" target="_blank">Preview</a>&nbsp;&nbsp;'.replace("{0}", item.previewUrl);
-					html += '<a href="{0}" target="_blank">Full Song</a>&nbsp;&nbsp;'.replace("{0}", obj.track_url);
-					html += '<strong>Track Price: </strong>{0} {1}</p>'.replace("{0}", item.trackPrice).replace("{1}", item.currency);
+					html += '<a href="{0}" target="_blank">Full Song</a>&nbsp;&nbsp;</p>'.replace("{0}", obj.track_url);
+					html += '<p><strong>Track Price: </strong>{0} {1}</p>'.replace("{0}", item.trackPrice).replace("{1}", item.currency);
 					html += '<p><strong>Artist: </strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.artist_url).replace("{1}", obj.artist_name);
 					html += '<p><strong>Album: </strong><a href="{0}" target="_blank">{1}</a></p>'.replace("{0}", obj.collection_url).replace("{1}", obj.collection_name);
 					html += '<p><strong>Album Price: </strong>{0} {1}</p>'.replace("{0}", item.collectionPrice).replace("{1}", item.currency);
