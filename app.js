@@ -31,7 +31,13 @@ function parseResults(result) {
 				html += '<div class = "pageButtons">';
 				for (var i = 0; i < pages; i++){
 					var pageNumber = i+1;
+					if (pageNumber === 1){
+						html += '<input class = "currentPageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
+					}
+					else
+					{
 					html += '<input  type = "button" class = "pageButton" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
+					}
 				};
 				html += '</div>';
 				for (var i = 0; i < 20  && i < results.length; i++) {
@@ -70,16 +76,22 @@ function goToPage(page){
 	var results = searchResults.results;
 				var html = "";
 				var pages = Math.ceil(results.length/20);
-				html += '<div class = "pageButtons">';
-				for (var i = 0; i < pages; i++){
-					var pageNumber = i+1;
-					html += '<input class = "pageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
-				};
-				html += '</div>';
-				html += '<br><br>';
 				if (page === 0){
 					page = 1;
 				}
+				html += '<div class = "pageButtons">';
+				for (var i = 0; i < pages; i++){
+					var pageNumber = i+1;
+					if (pageNumber === page){
+						html += '<input class = "currentPageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
+					}
+					else
+					{
+					html += '<input class = "pageButton" type = "button" value = "'+pageNumber+'" onclick= "goToPage('+pageNumber+');"><br>';
+					}
+				};
+				html += '</div>';
+				html += '<br><br>';
 				var firstResult = (page-1)*20;
 				var lastResult  = 0;
 				if (results.length >= page*20){

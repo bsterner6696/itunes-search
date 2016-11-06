@@ -24,6 +24,22 @@ a:hover {
 	background-color: #140033;
 	color: #ccb3ff
 }
+.currentPageButton {
+	background-color: #140033;
+	opacity: .7;
+	color: #ccb3ff;
+	border: none;
+	width: 30px;
+	margin: 5px 5px 5px 0px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.currentPageButton:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	background-color: #ccb3ff;
+	color: #140033;
+}
 .pageButtons {
 	position: fixed;
 	right: 5px;
